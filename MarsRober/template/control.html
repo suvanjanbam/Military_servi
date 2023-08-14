@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8"/>
+    <meta   content="width=device-width, initial-scale=1, shrink-to-fit=no"
+            name="viewport" />
+            <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet" />
+    
+        <link href="/static/css/materialdesignicons.min.css" rel="stylesheet"/>
+            
+    <title>Vehicle Controller</title>
+</head>
+<body>
+<div class="container-scroller" style="background-color: aqua;">
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper" style="background-color: aqua;">
+        <!-- partial -->
+        <div class="main-panel" style="height: 100vh; height: 100vh;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;">
+            <h1 style="margin-top: 100px;">Controlling the Vehicle</h1>
+            <form method="POST" action="{% url 'run_script' %}">
+                {% csrf_token %}
+                <input type="submit" value="Control Vehicle" style=" height: 100px; margin: 10%;" />
+            </form>
+        </div>
+        <!-- page-body-wrapper ends -->
+    </div>
+    <!-- container-scroller -->
+</body>
+</html>
